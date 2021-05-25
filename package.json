@@ -1,0 +1,27 @@
+{
+  "name": "nomadcoffee-backend",
+  "version": "1.0.0",
+  "description": "Nomad Coffee built with Prisma and GraphQL.",
+  "main": "index.js",
+  "repository": "https://github.com/nahyeon99/nomadcoffee-backend",
+  "author": "NaHyeon <nahyeonee99@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon --exec babel-node server.js --delay 2",
+    "migrate": "npx prisma migrate dev",
+    "studio": "npx prisma studio"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.23.0",
+    "apollo-server": "^2.24.1",
+    "dotenv": "^10.0.0",
+    "graphql": "^15.5.0",
+    "graphql-tools": "^7.0.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "prisma": "^2.23.0"
+  }
+}
