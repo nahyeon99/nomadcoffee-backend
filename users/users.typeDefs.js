@@ -1,4 +1,4 @@
-import { gql } from "apollo-server";
+import { gql } from "apollo-server-core";
 
 export default gql`
   type User {
@@ -7,23 +7,8 @@ export default gql`
     email: String!
     name: String!
     location: String
-    avatarURL: String
     githubUsername: String
-  }
-
-  type Mutation {
-    createAccount(
-      username: String!
-      email: String!
-      name: String!
-      location: String
-      password: String!
-      avatarURL: String
-      githubUsername: String
-    ): User
-  }
-
-  type Query {
-    seeProfile(username: String): User
+    bio: String
+    avatar: String
   }
 `;
