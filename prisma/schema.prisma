@@ -15,9 +15,11 @@ model User {
   username       String  @unique
   email          String  @unique
   name           String
-  location       String?
   password       String
+  location       String?
   githubUsername String?
   bio            String?
   avatar         String?
+  followers      User[]  @relation("FollowRelation", references: [id])
+  following      User[]  @relation("FollowRelation", references: [id])
 }
